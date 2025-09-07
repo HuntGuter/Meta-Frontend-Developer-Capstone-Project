@@ -6,7 +6,7 @@ import About from "./About.js";
 
 export default function Main() {
     return (
-        <main>
+        <main className="main-grid">
             <Hero />
             <Specials />
             <Testimonials />

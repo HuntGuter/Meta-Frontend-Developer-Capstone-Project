@@ -3,19 +3,19 @@ import Nav from "./Nav.js";
 
 export default function Footer() {
     return (
-        <footer className="site-footer">
-            <div className="container footer-grid">
+        <footer className="footer">
+            <div className="footer-grid">
                 {/*Logo*/}
                 <div className="footer-logo">
                     <a href="/">
-                        <img src="./public/Logo.svg" alt="Little Lemon Logo" />
+                        <img src="/Logo.svg" alt="Little Lemon Logo" />
                     </a>
                 </div>
 
                 {/*Nav*/}
                 <div className="footer-nav">
                     <h5>Navigation</h5>
-                    <Nav />
+                    <Nav navClass="footer-nav" />
                 </div>
 
                 {/*Contacts*/}

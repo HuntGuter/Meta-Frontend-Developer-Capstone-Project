@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TestimonialCard({item}) {
     return (
-        <article className="test-card">
+        <article className="card">
             <img 
                 src={item.avatar}
                 alt={`Avatar of ${item.name}`}

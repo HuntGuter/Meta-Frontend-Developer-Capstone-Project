@@ -42,17 +42,18 @@ const SAMPLE_ITEMS = [
 
 export default function Specials({items = SAMPLE_ITEMS}) {
     return (
-        <section id="specials" className="specials container">
-            <div className="specials-header">
-                <h2>Specials</h2>
-                <buttom className="btn ghost order-online">Order Online</buttom>
+        <section className="specials">
+          <div className="specials-header">
+                <h2>This week specials!</h2>
+                <button className="btn">Order Online</button>
+          </div>
+          <div className="specials-grid">
+            <div className="specials-card-grid">
+              {items.map((it) => (
+                <SpecialCard key={it.id} item={it} />
+              ))}
             </div>
-
-            <div className="cards">
-                {items.map((it) => (
-                    <SpecialCard key={it.id} item={it} />
-                ))}
-            </div>
+          </div>
         </section>
     );
 }

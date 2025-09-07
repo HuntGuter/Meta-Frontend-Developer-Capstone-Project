@@ -12,7 +12,7 @@ export default function SpecialCard({item}) {
             <h3>
                 {item.title} <span className="price">{item.price}</span>
             </h3>
-            <p>{item.disc}</p>
+            <p>{item.desc}</p>
             <a className="link-btn" href="#order">Order a delivery</a>
         </article>
     );

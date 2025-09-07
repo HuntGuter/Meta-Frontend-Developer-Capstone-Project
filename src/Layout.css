@@ -1,0 +1,174 @@
+/* Header */
+
+.siteHeader {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.header-grid {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 20px 0;
+  background-color: #495E57;
+}
+
+.hero-grid {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+/* Specials */
+
+.specials {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.specials-grid {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: space-between;
+}
+
+.specials-header {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specials-card-grid {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-content: baseline;
+  overflow: hidden;
+}
+
+/* Testimonials */
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.testimonials-grid {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonials-title {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* About */
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.about-grid {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer */
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.footer-grid {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contact ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.footer-social ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
