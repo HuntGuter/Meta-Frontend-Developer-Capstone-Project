@@ -15,7 +15,7 @@
 }
 
 .logo img {
-  height: 40px;
+  height: auto;
 }
 
 .header-nav ul {
@@ -39,13 +39,50 @@
   grid-template-columns: repeat(12, 1fr);
   padding: 20px 0;
   background-color: #495E57;
+  position: relative;
+  overflow: visible;
 }
 
 .hero-grid {
-  grid-column: 3 / 11;
+  grid-column: 3 / 7;
   display: flex;
-  justify-content: left;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative; 
+}
+
+.hero-text h1,
+.hero-text h3,
+.hero-text p {
+  margin: 0 0 16px 0;
+  justify-content: flex-start;
+}
+
+.hero-text p {
+  line-height: 1.5;
+  margin-right: 5%;
+}
+
+.hero-text .btn {
+  width: 50%;
+  height: 7ch;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero-image {
+  grid-column: 8 / 11;
+  position: relative;
+}
+
+.hero-image img {
+  position: absolute;
+  top: 0;
+  height: 120%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Specials */
@@ -54,29 +91,85 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
-  padding: 20px 0;
+  padding: 5% 0;
 }
 
 .specials-grid {
   grid-column: 3 / 11;
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  overflow: hidden;
+  user-select: none;
+  will-change: transform;
 }
 
 .specials-header {
   grid-column: 3 / 11;
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.specials-header .btn {
+  width: 25%;
+  height: 7ch;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .specials-card-grid {
-  grid-column: 3 / 11;
+  display: flex;
+  border-radius: 0;
+  padding: 0;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.specials-card-grid:active {
+  cursor: grabbing;
+}
+
+.special-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #edefee;
+  border-radius: 8px 8px 0 0;
+}
+
+
+.card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  display: block;
+}
+
+.card-title-row {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  align-content: baseline;
-  overflow: hidden;
+  align-items: center;
+  margin: 12px 0;
+  padding: 0 10px 0 10px;
+}
+
+.card-desc {
+  padding: 0 10px 0 10px;
+  margin: 0;
+}
+
+.card-order-btn {
+  margin-top: auto;
+  padding-bottom: 16px;
 }
 
 /* Testimonials */

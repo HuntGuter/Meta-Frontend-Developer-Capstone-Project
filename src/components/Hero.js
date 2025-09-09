@@ -7,16 +7,14 @@ export default function Hero() {
                 <div className="hero-text">
                     <h1>Little Lemon</h1>
                     <h3>Chicago</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat in purus in vulputate. Vivamus lacinia, nunc non interdum efficitur, arcu augue pharetra lorem, vitae tincidunt nisl nibh eu lectus.</p>
+                    <p>We are a family owned Mediterranean restaurant, focused on traditional recipes serced with a modern twist.</p>
                     <div className="hero-actions">
                         <button className="btn">Reserve a table</button>
                     </div>
-                </div>
-                <div className="hero-image">
-                    <div className="image-box">
-                        <img src="./restauranfood.jpg" alt="Image of Chef" />
-                    </div>
-                </div>
+                </div>  
+            </div>
+            <div className="hero-image">
+                    <img src="/restauranfood.jpg" alt="Image of Chef" />
             </div>
         </section>
     );
