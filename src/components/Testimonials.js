@@ -1,5 +1,6 @@
 import React from "react";
 import TestimonialCard from "./TestimonialCard.js";
+import Carousel from "./Carousel.js";
 
 const SAMPLE_TESTIMONIALS = [
   {
@@ -65,13 +66,16 @@ const SAMPLE_TESTIMONIALS = [
 export default function Testimonials ({items = SAMPLE_TESTIMONIALS}) {
     return (
         <section className="testimonials">
-          <h2 className="testimonials-title">What our customers say</h2>
-          <div className="testimonials-grid">
-            {SAMPLE_TESTIMONIALS.map((item) => (
-              <TestimonialCard key={item.id} item={item} />
-            ))}
+          <div className="testimonials-title">
+            <h2>What our customers say</h2>
           </div>
-
+          <Carousel 
+            items={SAMPLE_TESTIMONIALS}
+            visibleItems={4}
+            autoScroll={true}
+            interval={4000}
+            renderItem={(item) => <TestimonialCard item={item} />}
+          />
         </section>
     );
 }

@@ -94,7 +94,7 @@
   padding: 5% 0;
 }
 
-.specials-grid {
+.carousel-grid {
   grid-column: 3 / 11;
   justify-content: center;
   align-items: center;
@@ -124,7 +124,7 @@
   cursor: pointer;
 }
 
-.specials-card-grid {
+.carousel-card-grid {
   display: flex;
   border-radius: 0;
   padding: 0;
@@ -178,7 +178,6 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
-  padding: 20px 0;
 }
 
 .testimonials-grid {
@@ -191,7 +190,7 @@
 .testimonials-title {
   grid-column: 3 / 11;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

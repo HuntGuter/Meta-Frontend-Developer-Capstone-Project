@@ -14,7 +14,7 @@ export default function Hero() {
                 </div>  
             </div>
             <div className="hero-image">
-                    <img src="/restauranfood.jpg" alt="Image of Chef" />
+                    <img src="/restauranfood.jpg" alt="Chef" />
             </div>
         </section>
     );
