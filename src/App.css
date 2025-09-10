@@ -58,6 +58,36 @@ body {
   margin-bottom: 20px;
 }
 
+.about-text h2,
+.about-text h4,
+.about-text p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.about-text h2 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  color: #F4CE14;
+  font-size: 3rem;
+}
+
+.about-text h4 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  color: #edefee;
+  font-size: 1.6rem;
+}
+
+.about-text p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  color: #edefee;
+  font-size: 0.9rem;
+}
+
 /* Buttons */
 button, btn {
   background: #F4CE14;
@@ -78,14 +108,12 @@ button, btn {
   overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin: 20px;
 }
 
 .card-title {
   font-size: 18pt;
   font-weight: bold;
-  color: #495E57;
+  color: #333;
 }
 
 .card-text {

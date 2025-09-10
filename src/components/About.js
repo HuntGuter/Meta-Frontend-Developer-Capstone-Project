@@ -8,15 +8,17 @@ export default function About() {
                     <h2>Little Lemon</h2>
                     <h4>Chicago</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia, nunc non interdum efficitur, 
-                        arcu augue pharetra lorem, vitae tincidunt nisl nibh eu lectus. Our story began with a small family kitchen — 
-                        now we serve the neighborhood every day.
+                        Little Lemon is a family-owned Mediterranean restaurant located in the heart of Chicago.<br />
+                        We blend traditional recipes with a modern twist, using only fresh, locally sourced ingredients.<br />
+                        From light appetizers to hearty main courses, every dish is crafted with care and flavor.<br />
+                        Our cozy atmosphere makes Little Lemon the perfect spot for casual dinners and celebrations.<br />
+                        Come join us and experience the taste of the Mediterranean, right in your neighborhood.
                     </p>
                 </div>
 
                 <div className="about-image">
-                    <img src="#" alt="#" className="about-image-1" />
-                    <img src="#" alt="#" className="about-image-2" />
+                    <img src="/Mario and Adrian A.jpg" alt="Restaurant chef" className="about-image-1" />
+                    <img src="/restaurant chef B.jpg" alt="Mario and Adrian" className="about-image-2" />
                 </div>
             </div>
         </section>
