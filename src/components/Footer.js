@@ -1,4 +1,4 @@
-import React from "react";
+import '../styles/footer.css'
 import Nav from "./Nav.js";
 
 export default function Footer() {
@@ -22,9 +22,9 @@ export default function Footer() {
                 <div className="footer-contact">
                     <h5>Contact</h5>
                     <ul>
-                        <li><a href="#">Address</a></li>
-                        <li><a href="#">Phone</a></li>
-                        <li><a href="#">E-Mail</a></li>
+                        <li><a href="/">Address</a></li>
+                        <li><a href="/">Phone</a></li>
+                        <li><a href="/">E-Mail</a></li>
                     </ul>
                 </div>
 
@@ -32,9 +32,9 @@ export default function Footer() {
                 <div className="footer-social">
                     <h5>Social Media</h5>
                     <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">YouTube</a></li>
+                        <li><a href="/">Facebook</a></li>
+                        <li><a href="/">Instagram</a></li>
+                        <li><a href="/">YouTube</a></li>
                     </ul>
                 </div>
             </div>

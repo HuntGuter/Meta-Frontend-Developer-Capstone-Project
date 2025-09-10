@@ -1,5 +1,7 @@
 import SpecialCard from "./SpecialCard";
 import Carousel from "./Carousel.js";
+import { useState, useEffect } from "react";
+import '../styles/specials.css'
 
 const SAMPLE_Cards = [
   { 
@@ -41,6 +43,21 @@ const SAMPLE_Cards = [
 ];
 
 export default function Specials({items = SAMPLE_Cards}) {
+  const [visibleCards, setVisibleCards] = useState(3);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 860) {
+                setVisibleCards(2);
+            } else {
+                setVisibleCards(3);
+            }
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+  
   return (
       <section className="specials">
         <div className="specials-header">
@@ -49,7 +66,8 @@ export default function Specials({items = SAMPLE_Cards}) {
         </div>
         <Carousel
           items={SAMPLE_Cards}
-          visibleCards={3}
+          className="specials-carousel-grid"
+          visibleCards={visibleCards}
           interval={3000}
           renderItem={(item) => <SpecialCard item={item} className="special-card" />}
         />

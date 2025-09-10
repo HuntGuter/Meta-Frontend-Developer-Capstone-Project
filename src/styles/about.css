@@ -1,0 +1,120 @@
+/* About */
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #495E57;
+  margin: 5% 0 5% 0;
+  padding: 1% 0;
+}
+
+.about-grid {
+  grid-column: 3 / 11;
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.about-text {
+  grid-column: 1 / 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 1rem;
+}
+
+.about-image {
+  grid-column: 7 / 13;
+  position: relative;
+  height: auto;
+  margin: -5%;
+  min-height: 15rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-image img {
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  min-height: 48%;
+}
+
+.about-image-1 {
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 62%;
+  height: auto;
+}
+
+.about-image-2 {
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 58%;
+  height: auto;
+}
+
+@media (min-width: 36.5625rem) and (max-width: 53.75rem) {
+  .about-grid {
+    grid-column: 2 / 12;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .about-image {
+    margin: 0;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image img {
+    position: static;
+    width: 100%;
+    max-width: auto;
+    height: auto;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-image-1,
+  .about-image-2 {
+    width: 80%;
+    max-width: 18.75rem;
+  }
+}
+
+/* Медиа-запрос для телефонов (ширина экрана до 480px) */
+@media (max-width: 36.5625rem) {
+  .about {
+    margin: 10% 0;
+    padding: 5% 0;
+  }
+  
+  .about-grid {
+    grid-column: 1 / -1;
+    padding: 0 1rem;
+  }
+  
+  .about-image {
+    margin: 0;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image img {
+    position: static;
+    width: 100%;
+    max-width: auto;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import '../styles/about.css'
 
 export default function About() {
     return (
@@ -11,8 +11,6 @@ export default function About() {
                         Little Lemon is a family-owned Mediterranean restaurant located in the heart of Chicago.<br />
                         We blend traditional recipes with a modern twist, using only fresh, locally sourced ingredients.<br />
                         From light appetizers to hearty main courses, every dish is crafted with care and flavor.<br />
-                        Our cozy atmosphere makes Little Lemon the perfect spot for casual dinners and celebrations.<br />
-                        Come join us and experience the taste of the Mediterranean, right in your neighborhood.
                     </p>
                 </div>
 

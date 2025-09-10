@@ -1,11 +1,14 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, { useEffect, useState, useRef, useCallback, useMemo } from "react";
 
-export default function Carousel({ items, visibleCards = 4, renderItem, autoScroll = true, interval = 5000 }) {
-  const extendedItems = [ // For infinite effect, clone items at start and end
-    ...items.slice(-visibleCards),
-    ...items,
-    ...items.slice(0, visibleCards),
-  ];
+export default function Carousel({ items, visibleCards = 4, renderItem, autoScroll = true, interval = 5000, className = ''}) {
+  const extendedItems = useMemo(() => { // Memoize extended items for infinite effect
+    return [
+      ...items.slice(-visibleCards),
+      ...items,
+      ...items.slice(0, visibleCards),
+    ];
+  }, [items, visibleCards]);
+    
 
   const [currentIndex, setCurrentIndex] = useState(visibleCards);
   const [isDragging, setIsDragging] = useState(false);
@@ -15,6 +18,11 @@ export default function Carousel({ items, visibleCards = 4, renderItem, autoScro
 
   const sliderRef = useRef(null);
   const intervalRef = useRef(null);
+
+  useEffect(() => {
+    setCurrentIndex(visibleCards);
+    setTranslateX(-visibleCards * (100 / visibleCards));
+  }, [visibleCards]);
 
   // Slide to index
   const slideTo = useCallback(
@@ -87,7 +95,7 @@ export default function Carousel({ items, visibleCards = 4, renderItem, autoScro
 
   return (
     <div
-      className="carousel-grid"
+      className={className}
       ref={sliderRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
@@ -96,7 +104,7 @@ export default function Carousel({ items, visibleCards = 4, renderItem, autoScro
       style={{ overflow: "hidden", cursor: isDragging ? "grabbing" : "grab" }} // Add cursor style here
     >
       <div
-        className="carousel-card-grid"
+        className={`${className}-card-grid`}
         style={{
           display: "flex",
           transform: `translateX(${translateX}%)`,

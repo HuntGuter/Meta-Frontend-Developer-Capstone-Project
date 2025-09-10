@@ -1,0 +1,180 @@
+/* Specials */
+
+.specials {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+  padding: 5% 0;
+}
+
+.specials-carousel-grid {
+  grid-column: 3 / 11;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  overflow: hidden;
+  user-select: none;
+  will-change: transform;
+}
+
+.specials-header {
+  grid-column: 3 / 11;
+  display: flex;
+  gap: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.specials-header .btn {
+  width: 25%;
+  height: 7ch;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.specials-carousel-card-grid {
+  display: flex;
+  border-radius: 0;
+  padding: 0;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+
+.specials-card-grid:active {
+  cursor: grabbing;
+}
+
+.special-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #edefee;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+
+.card-image {
+  width: 100%;
+  height: 15.625rem;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: block;
+}
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.75rem 0;
+  padding: 0 0.625rem 0 0.625rem;
+}
+
+.card-desc {
+  padding: 0 0.625rem 0 0.625rem;
+  margin: 0;
+}
+
+.card-order-btn {
+  margin-top: auto;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 36.5625rem) {
+  .specials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    padding: 5% 0;
+  }
+  
+  .specials-carousel-grid {
+    grid-column: 1 / 5;
+    justify-content: space-between;
+  }
+
+  .specials-header {
+    grid-column: 1 / 5;
+    padding: 0.5rem 1rem;
+  }
+
+  .specials-header h2 {
+    font-size: 2rem;
+  }
+
+  .specials-header .btn {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .special-card {
+    font-size: 0.875rem;
+  }
+
+  .card-image {
+    height: 10rem;
+  }
+
+  .card-title-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-title-row h4 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 36.5625rem) and (max-width: 53.75rem) {
+  .specials {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.25rem;
+    padding: 5% 0;
+  }
+  
+  .specials-carousel-grid {
+    grid-column: 1 / 9;
+    justify-content: space-between;
+  }
+
+  .specials-header {
+    grid-column: 1 / 9;
+    padding: 0.5rem 1rem;
+  }
+  
+  .specials-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .specials-header .btn {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .special-card {
+    font-size: 1rem;
+  }
+
+  .card-image {
+    height: 12rem;
+  }
+
+  .card-title-row {
+    flex-direction: column;
+    align-items: space-between;
+    text-align: center;
+  }
+
+  .card-title-row h4 {
+    margin-bottom: 0.5rem;
+  }
+}

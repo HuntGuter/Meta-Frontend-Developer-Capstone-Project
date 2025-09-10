@@ -1,6 +1,7 @@
-import React from "react";
+import {useState, useEffect} from "react";
 import TestimonialCard from "./TestimonialCard.js";
 import Carousel from "./Carousel.js";
+import '../styles/testimonials.css'
 
 const SAMPLE_TESTIMONIALS = [
   {
@@ -64,14 +65,31 @@ const SAMPLE_TESTIMONIALS = [
 
 
 export default function Testimonials ({items = SAMPLE_TESTIMONIALS}) {
-    return (
+      const [visibleCards, setVisibleCards] = useState(3);
+        useEffect(() => {
+            const handleResize = () => {
+                if (window.innerWidth <= 585) {
+                    setVisibleCards(3);
+                } else if (window.innerWidth <= 986) {
+                    setVisibleCards(3);
+                } else {
+                    setVisibleCards(4);
+                }
+            };
+            handleResize();
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }, []);
+        
+        return (
         <section className="testimonials">
           <div className="testimonials-title">
             <h2>What our customers say</h2>
           </div>
           <Carousel 
             items={SAMPLE_TESTIMONIALS}
-            visibleItems={4}
+            className="testimonials-carousel-grid"
+            visibleCards={visibleCards}
             autoScroll={true}
             interval={4000}
             renderItem={(item) => <TestimonialCard item={item} />}
