@@ -14,7 +14,7 @@ export default function Header() {
         <header className="siteHeader">
             <div className="header-grid">
                 <div className="logo">
-                    <a href="#home">
+                    <a href="/">
                         <img src="/Logo.svg" alt="Little Lemon Logo" />
                     </a>
                 </div>

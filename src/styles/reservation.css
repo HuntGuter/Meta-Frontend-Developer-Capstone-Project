@@ -1,0 +1,208 @@
+.reservation-step {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.reservation-header {
+  grid-column: 1 / 13;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+  background-color: #495E57;
+  padding: 2rem 1rem;
+}
+
+.reservation-header h2 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  color: #F4CE14;
+  font-size: 2.5rem;
+}
+
+.reservation-header p {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  color: #edefee;
+  font-size: 1.25rem;
+}
+
+.form-section {
+  grid-column: 3 / 11;
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.75rem;
+  padding: 1.25rem 1rem;
+  border-bottom: 2px solid #495E57;
+}
+
+.form-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #495E57;
+  font-weight: 600;
+}
+
+.form-date,
+.form-time,
+.form-guests,
+.form-occasion {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-date select,
+.form-time select,
+.form-guests select,
+.form-occasion select {
+  flex: 1;
+  min-width: 120px;
+  max-width: 300px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23495E57' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 8px;
+}
+
+.form-date select:invalid,
+.form-time select:invalid,
+.form-guests select:invalid
+.form-occasion select:invalid {
+  color: #999;
+}
+
+.form-date select:hover,
+.form-time select:hover,
+.form-guests select:hover,
+.form-occasion select:hover,
+.form-date select:focus,
+.form-time select:focus,
+.form-guests select:focus,
+.form-occasion select:focus {
+  border-color: #495E57;
+  box-shadow: 0 0 8px rgba(73, 94, 87, 0.3);
+  outline: none;
+}
+
+.form-section input {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-section input:focus {
+  outline: none;
+  border-color: #495E57;
+  box-shadow: 0 0 0 2px rgba(73, 94, 87, 0.2);
+}
+
+.form-section label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+}
+
+.form-section input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.form-section span {
+  position: relative;
+  padding-left: 2rem;
+  line-height: 1.4;
+}
+
+.form-section span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #495E57;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.form-section span::after {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  top: 50%;
+  width: 0.35rem;
+  height: 0.7rem;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: translateY(-60%) rotate(45deg) scale(0);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.form-section input[type="checkbox"]:checked + span::before {
+  background-color: #495E57;
+  border-color: #495E57;
+}
+
+.form-section input[type="checkbox"]:checked + span::after {
+  transform: translateY(-60%) rotate(45deg) scale(1);
+  opacity: 1;
+}
+
+.reservation-btn {
+  grid-column: 3 / 11;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.reservanion-finish-btn,
+.reservanion-back-btn {
+  flex: 1;
+  margin: 0 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.reservanion-next-btn {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.disabled-select {
+  pointer-events: none;
+  opacity: 0.6;
+}
+

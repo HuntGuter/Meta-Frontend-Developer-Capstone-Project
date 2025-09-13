@@ -37,6 +37,11 @@
   cursor: pointer;
 }
 
+button a {
+  all: unset;
+  cursor: pointer;
+}
+
 .hero-image {
   grid-column: 8 / 11;
   position: relative;

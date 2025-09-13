@@ -14,7 +14,7 @@ const SAMPLE_TESTIMONIALS = [
   {
     id: 2,
     name: "Michael T.",
-    text: "Perfect spot for a family dinner. Cozy atmosphere and amazing service.",
+    text: "Perfect spot for a family dinner. Cozy atmosphere.",
     rating: 4,
     avatar: "/avatar-male.png",
   },
