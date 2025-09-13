@@ -206,3 +206,7 @@
   opacity: 0.6;
 }
 
+.label-tests {
+  visibility: hidden;
+}
+
