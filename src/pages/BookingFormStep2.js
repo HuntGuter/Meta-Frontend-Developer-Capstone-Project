@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function BookingFormStep2({ formData, updateForm, onBack, onFinish,}) {
+export default function BookingFormStep2({ formData, updateForm, onBack, handleFinish,}) {
   const [errors, setErrors] = useState({});
 
   const isValid = () => {
@@ -23,9 +23,9 @@ export default function BookingFormStep2({ formData, updateForm, onBack, onFinis
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleFinish = () => {
+  const handleFinishClick = () => {
     if (isValid()) {
-      alert("Reservation successful!");
+      handleFinish(formData);
       window.location.href = "/";
     }
   };
@@ -130,7 +130,7 @@ export default function BookingFormStep2({ formData, updateForm, onBack, onFinis
 
       <div className="reservation-btn">
         <button onClick={onBack} className="reservanion-back-btn" aria-label="Go back to step 1">Back</button>
-        <button onClick={handleFinish} className="reservation-finish-btn" disabled={!isValid} aria-label="Finish reservation">Finish Reservation</button>
+        <button onClick={handleFinishClick} className="reservation-finish-btn" disabled={!isValid} aria-label="Finish reservation">Finish Reservation</button>
       </div>
     </div>
   );

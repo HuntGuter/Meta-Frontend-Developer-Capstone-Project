@@ -46,7 +46,7 @@ export default function BookingPage() {
         });
         setStep(1);
         } else {
-        alert("Something went wrong. Please try again.");
+            alert("Something went wrong. Please try again.");
         }
     };
 
@@ -65,7 +65,7 @@ export default function BookingPage() {
                         formData={formData}
                         updateForm={updateForm} 
                         onBack={() => setStep(1)}
-                        onFinish={handleSubmit}
+                        handleFinish={handleSubmit}
                     />
                 )}
             </div>

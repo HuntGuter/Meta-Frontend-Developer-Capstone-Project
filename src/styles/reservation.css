@@ -216,12 +216,13 @@
   flex: 1;
   min-width: 120px;
   max-width: 300px;
+  height: calc(2.5rem + 1.2em);
 }
 
 .error {
   margin-top: 0.25rem;
   color: red;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
 }
 

@@ -43,6 +43,17 @@ export default function Carousel({ items, visibleCards = 4, renderItem, autoScro
     return () => clearInterval(intervalRef.current);
   }, [currentIndex, autoScroll, interval, slideTo]);
 
+  useEffect(() => {
+    const handleVisibility = () => {
+      if (!document.hidden) {
+        setTranslateX(-currentIndex * (100 / visibleCards));
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => document.removeEventListener("visibilitychange", handleVisibility);
+  }, [currentIndex, visibleCards]);
+
+
   // Handle transition end for infinite effect
   const handleTransitionEnd = () => {
     let jumpIndex = currentIndex;
