@@ -82,7 +82,7 @@ export default function Testimonials ({items = SAMPLE_TESTIMONIALS}) {
         }, []);
         
         return (
-        <section className="testimonials">
+        <section className="testimonials" aria-label="Customer Testimonials Section">
           <div className="testimonials-title">
             <h2>What our customers say</h2>
           </div>
@@ -92,7 +92,11 @@ export default function Testimonials ({items = SAMPLE_TESTIMONIALS}) {
             visibleCards={visibleCards}
             autoScroll={true}
             interval={4000}
-            renderItem={(item) => <TestimonialCard item={item} />}
+            renderItem={(item) => 
+              <TestimonialCard 
+                item={item} 
+                aria-label={`Testimonial by ${item.name}, rating: ${item.rating} stars`}
+              />}
           />
         </section>
     );

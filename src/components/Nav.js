@@ -6,12 +6,12 @@ const Nav = ({navClass, isMenuOpen, onLinkClick}) => {
     return (
         <nav className={navClasses} aria-label="Main Navigation">
             <ul className="main-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><Link to="/booking">Reservation</Link></li>
-            <li><a href="#orderonline">Order Online</a></li>
-            <li><a href="#login">Login</a></li>
+            <li><a href="/" aria-label="Home Page">Home</a></li>
+            <li><a href="#about" aria-label="About Section">About</a></li>
+            <li><a href="#menu" aria-label="Menu Section">Menu</a></li>
+            <li><Link to="/booking" aria-label="Reservation Page">Reservation</Link></li>
+            <li><a href="#orderonline" aria-label="Order Online Section">Order Online</a></li>
+            <li><a href="#login" aria-label="Login Section">Login</a></li>
             </ul>
         </nav>
     );

@@ -59,17 +59,22 @@ export default function Specials({items = SAMPLE_Cards}) {
 
   
   return (
-      <section className="specials">
+      <section className="specials" aria-label="This Week Special Section">
         <div className="specials-header">
               <h2>This week specials!</h2>
-              <button className="btn">Order Online</button>
+              <button className="btn" aria-label="Order online button">Order Online</button>
         </div>
         <Carousel
           items={SAMPLE_Cards}
           className="specials-carousel-grid"
           visibleCards={visibleCards}
           interval={3000}
-          renderItem={(item) => <SpecialCard item={item} className="special-card" />}
+          renderItem={(item) => 
+            <SpecialCard 
+              item={item} 
+              className="special-card"
+              aria-label={`Special dish: ${item.title}, ${item.price}`}
+            />}
         />
       </section>
   );

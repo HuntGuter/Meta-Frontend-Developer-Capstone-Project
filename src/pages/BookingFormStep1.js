@@ -58,6 +58,7 @@ export default function BookingFormStep1({ formData, updateForm, onNext }) {
               id="month-select"
               value={formData.month}
               onChange={(e) => updateForm("month", e.target.value)}
+              aria-label="Select month"
             >
               <option value="" disabled hidden>Month</option>
               <option value="01">January</option>
@@ -82,6 +83,7 @@ export default function BookingFormStep1({ formData, updateForm, onNext }) {
               id="day-select"
               value={formData.day}
               onChange={(e) => updateForm("day", e.target.value)}
+              aria-label="Select day"
             >
               <option value="" disabled hidden>Day</option>
               {Array.from({ length: 31 }, (_, i) => (
@@ -106,6 +108,7 @@ export default function BookingFormStep1({ formData, updateForm, onNext }) {
               value={formData.time}
               onChange={(e) => updateForm("time", e.target.value)}
               className={availableTimes.length === 0 ? "disabled-select" : ""}
+              aria-label="Select time"
             >
               {availableTimes.length === 0 ? (
                 <option value="" disabled>Please select a date first</option>
@@ -133,6 +136,7 @@ export default function BookingFormStep1({ formData, updateForm, onNext }) {
               id="guests-select"
               value={formData.guests}
               onChange={(e) => updateForm("guests", e.target.value)}
+              aria-label="Select number of guests"
             >
               <option value="" disabled hidden>Guests</option>
               {Array.from({ length: 10 }, (_, i) => (
@@ -154,6 +158,7 @@ export default function BookingFormStep1({ formData, updateForm, onNext }) {
               id="occasion-select"
               value={formData.occasion}
               onChange={(e) => updateForm("occasion", e.target.value)}
+              aria-label="Select occasion"
             >
               <option value="" disabled hidden>Select occasion</option>
               <option value="birthday">Birthday</option>
@@ -172,6 +177,7 @@ export default function BookingFormStep1({ formData, updateForm, onNext }) {
           onClick={handleNext}
           className={`reservanion-next-btn ${!isValid ? "btn-disabled" : ""}`}
           type="button"
+          aria-label="Go to next step"
         >
           Next Step
         </button>

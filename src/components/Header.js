@@ -14,12 +14,12 @@ export default function Header() {
         <header className="siteHeader">
             <div className="header-grid">
                 <div className="logo">
-                    <a href="/">
+                    <a href="/" aria-label="Go to homepage">
                         <img src="/Logo.svg" alt="Little Lemon Logo" />
                     </a>
                 </div>
                 <div className="menu-container">
-                    <button className="burger-menu" onClick={toggleMenu} aria-expanded={isMenuOpen} aria-controls="main-nav">
+                    <button className="burger-menu" onClick={toggleMenu} aria-expanded={isMenuOpen} aria-controls="main-nav" aria-label="Toggle menu">
                         <span className="burger-icon"></span>
                     </button>
                     <Nav navClass="header-nav" isMenuOpen={isMenuOpen} onLinkClick={toggleMenu}/>

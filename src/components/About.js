@@ -2,7 +2,7 @@ import '../styles/about.css'
 
 export default function About() {
     return (
-        <section id="about" className="about">
+        <section id="about" className="about" aria-label='About Section'>
             <div className="about-grid">
                 <div className="about-text">
                     <h2>Little Lemon</h2>
@@ -15,8 +15,8 @@ export default function About() {
                 </div>
 
                 <div className="about-image">
-                    <img src="/Mario and Adrian A.jpg" alt="Restaurant chef" className="about-image-1" />
-                    <img src="/restaurant chef B.jpg" alt="Mario and Adrian" className="about-image-2" />
+                    <img src="/Mario and Adrian A.jpg" alt="Restaurant chef cooking" className="about-image-1" />
+                    <img src="/restaurant chef B.jpg" alt="Mario and Adrian talking" className="about-image-2" />
                 </div>
             </div>
         </section>
