@@ -210,3 +210,18 @@
   visibility: hidden;
 }
 
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 120px;
+  max-width: 300px;
+}
+
+.error {
+  margin-top: 0.25rem;
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
