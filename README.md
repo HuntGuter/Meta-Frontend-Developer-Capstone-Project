@@ -63,3 +63,10 @@ This capstone project concludes Meta’s official professional specialization an
 - Form handling
 - State and props
 - Front-end best practices
+
+👤 Author
+
+Mykyta Olshanskyi
+Frontend Developer
+GitHub: https://github.com/HuntGuter
+LinkedIn: https://www.linkedin.com/in/huntguter/
